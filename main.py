@@ -11,9 +11,9 @@ async def on_ready():
   print(f"Id: {bot.user.id}")
 
 async def status_task():
-  await bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.playing, name="Classic computer games."))
+  await bot.change_presence(status=discord.Status.online, activity = discord.Activity(type=discord.ActivityType.playing, name="Classic computer games."))
   await asyncio.sleep(40)
-  await bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name=f"{len(bot.guilds)} servers | {len(bot.users)} users"))
+  await bot.change_presence(status=discord.Status.online, activity=discord.Activity(type = discord.ActivityType.watching, name=f"{len(bot.guilds)} servers | {len(bot.users)} users"))
   await asyncio.sleep(40)
  
 
