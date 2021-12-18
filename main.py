@@ -1,4 +1,4 @@
-import discord, os, random, asyncio
+import discord, os, random, asyncio, traceback
 from discord.ext import commands
 import ClientConfig, B 
 
@@ -20,6 +20,13 @@ async def status_task():
 async def startup():
   await bot.wait_until_ready()
   await status_task()
+
+@bot.event
+async def on_error(event, *args, **kwargs):
+  more_information = os.sys.exc_info()
+  error_wanted = traceback.format_exc()
+  traceback.print_exc()
+  #print(more_information[0])
 
 B.b()
 bot.loop.create_task(startup())
