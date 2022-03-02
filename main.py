@@ -1,6 +1,6 @@
 import discord, os, random, asyncio, traceback
 from discord.ext import commands
-import ClientConfig, B 
+import ClientConfig
 
 bot = ClientConfig.client
 
@@ -28,6 +28,6 @@ async def on_error(event, *args, **kwargs):
   traceback.print_exc()
   #print(more_information[0])
 
-B.b()
+
 bot.loop.create_task(startup())
 bot.run(os.environ["TOKEN"])
