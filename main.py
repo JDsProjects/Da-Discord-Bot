@@ -1,6 +1,7 @@
 import discord, os, random, asyncio, traceback
 from discord.ext import commands
 import ClientConfig
+import dotenv
 
 bot = ClientConfig.client
 
@@ -28,6 +29,6 @@ async def on_error(event, *args, **kwargs):
   traceback.print_exc()
   #print(more_information[0])
 
-
+dotenv.load_dotenv()
 bot.loop.create_task(startup())
 bot.run(os.environ["TOKEN"])
