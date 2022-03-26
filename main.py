@@ -15,7 +15,7 @@ async def get_prefix(client, message):
 
 async def startup(self):
     await self.wait_until_ready()
-    await status_task()
+    await status_task(self)
 
 
 async def status_task(self):
