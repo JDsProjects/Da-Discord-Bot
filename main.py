@@ -1,6 +1,7 @@
 import discord, os, random, asyncio, traceback, re
 from discord.ext import commands
 import dotenv
+import jishaku
 
 
 async def get_prefix(client, message):
@@ -38,6 +39,7 @@ class DaDiscordBot(commands.Bot):
 
     async def setup_hook(self):
         self.loop.create_task(startup(self))
+        await bot.load_extension("jishaku")
 
 
 bot = DaDiscordBot(command_prefix=(get_prefix), intents=discord.Intents.all())
