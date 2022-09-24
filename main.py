@@ -1,7 +1,14 @@
-import discord, os, random, asyncio, traceback, re
-from discord.ext import commands
+import asyncio
+import os
+import random
+import re
+import sys
+import traceback
+
+import discord
 import dotenv
 import jishaku
+from discord.ext import commands
 
 
 async def get_prefix(bot, message):
@@ -54,7 +61,7 @@ async def on_ready():
 
 @bot.event
 async def on_error(event, *args, **kwargs):
-    more_information = os.sys.exc_info()
+    more_information = sys.exc_info()
     error_wanted = traceback.format_exc()
     traceback.print_exc()
     # print(more_information[0])
