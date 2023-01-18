@@ -6,7 +6,6 @@ import sys
 import traceback
 
 import discord
-import dotenv
 import jishaku
 from discord.ext import commands
 
