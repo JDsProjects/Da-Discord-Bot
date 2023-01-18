@@ -66,5 +66,4 @@ async def on_error(event, *args, **kwargs):
     # print(more_information[0])
 
 
-dotenv.load_dotenv()
 bot.run(os.environ["TOKEN"])
