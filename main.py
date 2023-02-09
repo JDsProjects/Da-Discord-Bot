@@ -1,5 +1,6 @@
 import asyncio
 import os
+import logging
 import random
 import re
 import sys
@@ -66,4 +67,5 @@ async def on_error(event, *args, **kwargs):
     # print(more_information[0])
 
 
+logging.basicConfig(level=logging.INFO)
 bot.run(os.environ["TOKEN"])
