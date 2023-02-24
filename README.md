@@ -1,3 +1,4 @@
-# Da-Discord-Bot
+# Retro Bot
 
-WIP Da Discord Bot, a side bot from JDBot, and other bots.
+WIP Retro Bot, a side bot from JDBot, and other bots.
+A Bot designed for gaming
